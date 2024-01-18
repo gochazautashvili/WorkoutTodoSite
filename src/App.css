@@ -1,0 +1,316 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: lightgrey;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    padding: 20px 0;
+    margin-bottom: 50px;
+    background: #fff;
+}
+
+main {
+    margin-top: 100px;
+}
+
+.navbar__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar__inner a {
+    text-decoration: underline blueviolet;
+    font-size: 30px;
+    font-weight: 900;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    letter-spacing: 1px;
+    color: black;
+}
+
+.home__inner {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.home__workout {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    width: 70%;
+}
+
+.workout__details {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    width: 100%;
+    min-width: 220px;
+
+    padding: 20px;
+    box-shadow: 0px 0px 20px 1px lightslategrey;
+}
+
+.workout__details_top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.workout__details_top button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 25px;
+    height: 25px;
+
+    background: green;
+    color: white;
+
+    outline: none;
+    border: none;
+    border-radius: 10px;
+
+    font-size: 20px;
+    font-size: 900;
+
+    cursor: pointer;
+}
+
+.workout__details_top h4 {
+    font-size: 20px;
+    font-weight: 900;
+
+    color: green;
+}
+
+.addWorkout {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+
+    border: 1px solid grey;
+
+    width: 100%;
+    max-width: 350px;
+
+    gap: 20px;
+}
+
+.addWorkout__box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.addWorkout__box label {
+    font-size: 20px;
+    font-weight: 600;
+
+    color: black;
+}
+
+.addWorkout__box input {
+    width: 100%;
+    height: 40px;
+
+    font-size: 16px;
+    padding: 10px;
+    color: black;
+
+    background: none;
+    border: 1px solid black;
+    border-radius: 10px;
+    outline: none;
+}
+
+.addWorkout button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 180px;
+    height: 40px;
+
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+
+    background: blueviolet;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.error {
+    color: rgb(121, 5, 5);
+}
+
+.navbar__register {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar__register a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+
+}
+
+/* login and register form */
+
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    width: 100%;
+    height: 80vh;
+}
+
+.login__form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.login__form label {
+    font-size: 18px;
+    font-weight: 900;
+    color: black;
+}
+
+.login__form input {
+    width: 350px;
+    height: 40px;
+    padding: 10px;
+
+    font-size: 18px;
+    color: black;
+    font-weight: 600;
+
+    border: 2px solid black;
+    outline: none;
+
+    border-radius: 8px;
+    background: none;
+}
+
+.login__form input::placeholder {
+    font-size: 16px;
+}
+
+.login__form button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+
+    border-radius: 10px;
+    background: white;
+    border: 1px solid black;
+    outline: none;
+    cursor: pointer;
+}
+
+/* user side */
+
+.user__side {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.user {
+    padding: 6px;
+    border: 1px solid black;
+    border-radius: 8px;
+
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.logout {
+    padding: 10px 30px;
+
+    font-size: 18px;
+    color: white;
+
+    background: grey;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* media */
+
+@media (max-width: 600px) {
+    .home__inner {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .home__workout {
+        width: 100%;
+    }
+
+    .addWorkout {
+        max-width: none;
+    }
+}
+
+@media (max-width: 500px) {
+    .navbar__inner a {
+        font-size: 18px;
+    }
+
+    .user {
+        padding: 0;
+        border: none;
+
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .logout {
+        font-size: 16px;
+        padding: 5px 10px;
+    }
+}
